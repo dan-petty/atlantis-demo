@@ -13,6 +13,12 @@ module "atlantis" {
   # DNS (without trailing dot)
   route53_zone_name = "aws.danielpetty.com"
 
+  # IAM Policies
+  policies_arn = [
+    "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+    "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+  ]
+
   # Atlantis
   atlantis_github_user       = var.github_user
   atlantis_github_user_token = var.github_user_token
