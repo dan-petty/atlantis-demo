@@ -16,6 +16,7 @@ module "atlantis" {
   # IAM Policies
   policies_arn = [
     "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+    "arn:aws:iam::aws:policy/AmazonVPCFullAccess",
     "arn:aws:iam::aws:policy/AmazonS3FullAccess"
   ]
 
